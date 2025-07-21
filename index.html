@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valoreco SARL - Solutions Durables pour Construction et Agriculture</title>
+    <meta name="description" content="Valoreco SARL, fournisseur marocain de solutions durables pour la construction et l'agriculture. Films plastiques industriels et agricoles, tubes PPR, revêtements extérieurs premium Novowood.">
+    <meta name="keywords" content="Valoreco, films plastiques, tubes PPR, Novowood, construction durable, agriculture, Maroc">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Valoreco SARL - Solutions Durables">
+    <meta property="og:description" content="Fournisseur marocain de solutions durables pour la construction et l'agriculture">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://valoreco.ma">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="assets/images/valoreco-logo.png" alt="Valoreco SARL Logo" class="logo">
+                    <span class="logo-text">VALORECO</span>
+                </div>
+                <div class="hamburger" id="hamburger-menu" tabindex="0" aria-label="Ouvrir le menu" role="button">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li class="nav-item"><a href="produits.html" class="nav-link">Nos Produits</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">Qui sommes-nous</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SWIPER SLIDER -->
+    <section class="nv-hero-slider">
+        <div class="swiper hero-swiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide nv-hero-slide" style="background-image:url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80');">
+                    <div class="nv-hero-slide-content">
+                        <h1 class="nv-hero-title">Valoreco Solutions</h1>
+                        <p class="nv-hero-subtitle">Des solutions innovantes et durables pour l’aménagement extérieur et la construction.</p>
+                        <div class="nv-hero-btn-row">
+                            <a href="produits.html" class="btn btn-primary btn-hero">Découvrir nos produits</a>
+                            <a href="#" class="btn btn-secondary btn-hero" onclick="openDevisForm(event)">Demander un devis</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide nv-hero-slide" style="background-image:url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80');">
+                    <div class="nv-hero-slide-content">
+                        <h1 class="nv-hero-title">Decking Valoreco</h1>
+                        <p class="nv-hero-subtitle">Terrasses et revêtements extérieurs en composite, robustes et élégants.</p>
+                        <div class="nv-hero-btn-row">
+                            <a href="produits.html" class="btn btn-primary btn-hero" onclick="openDevisForm(event)">Découvrir nos produits</a>
+                            <a href="#" class="btn btn-secondary btn-hero" onclick="openDevisForm(event)">Demander un devis</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide nv-hero-slide" style="background-image:url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80');">
+                    <div class="nv-hero-slide-content">
+                        <h1 class="nv-hero-title">Bardage Valoreco</h1>
+                        <p class="nv-hero-subtitle">Bardages modernes pour façades ventilées et murs extérieurs.</p>
+                        <div class="nv-hero-btn-row">
+                            <a href="produits.html" class="btn btn-primary btn-hero" onclick="openDevisForm(event)">Découvrir nos produits</a>
+                            <a href="#" class="btn btn-secondary btn-hero" onclick="openDevisForm(event)">Demander un devis</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 4 -->
+                <div class="swiper-slide nv-hero-slide" style="background-image:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80');">
+                    <div class="nv-hero-slide-content">
+                        <h1 class="nv-hero-title">Brise-soleil Valoreco</h1>
+                        <p class="nv-hero-subtitle">Lames et protections solaires pour un confort optimal et un design moderne.</p>
+                        <div class="nv-hero-btn-row">
+                            <a href="produits.html" class="btn btn-primary btn-hero" onclick="openDevisForm(event)">Découvrir nos produits</a>
+                            <a href="#" class="btn btn-secondary btn-hero" onclick="openDevisForm(event)">Demander un devis</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <!-- PRODUCT HIGHLIGHTS -->
+    <section class="nv-products-highlight nv-section-divider">
+        <div class="container">
+            <div class="nv-products-grid">
+                <div class="nv-product-card nv-product-card-corporate">
+                    <span class="nv-product-label-new-corporate">Nouveau</span>
+                    <div class="nv-product-img">
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Decking Valoreco" />
+                    </div>
+                    <h3>Decking</h3>
+                    <p>Terrasses en composite pour espaces extérieurs modernes et durables.</p>
+                    <a href="produits.html" class="btn btn-secondary">Découvrir</a>
+                </div>
+                <div class="nv-product-card nv-product-card-corporate">
+                    <div class="nv-product-img">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=600&q=80" alt="Bardage Valoreco" />
+                    </div>
+                    <h3>Bardage</h3>
+                    <p>Bardages en composite pour façades ventilées et murs extérieurs.</p>
+                    <a href="produits.html" class="btn btn-secondary">Découvrir</a>
+                </div>
+                <div class="nv-product-card nv-product-card-corporate">
+                    <div class="nv-product-img">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" alt="Brise-soleil Valoreco" />
+                    </div>
+                    <h3>Brise-soleil</h3>
+                    <p>Lames et protections solaires pour un confort optimal et un design moderne.</p>
+                    <a href="produits.html" class="btn btn-secondary">Découvrir</a>
+                </div>
+                <div class="nv-product-card nv-product-card-corporate">
+                    <div class="nv-product-img">
+                        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80" alt="Accessoires Valoreco" />
+                    </div>
+                    <h3>Accessoires</h3>
+                    <p>Fixations, finitions et accessoires pour des projets sur-mesure.</p>
+                    <a href="produits.html" class="btn btn-secondary">Découvrir</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUSTAINABILITY / CORPORATE SECTION -->
+    <section class="nv-sustainability">
+        <div class="container nv-sustainability-content">
+            <div class="nv-sustainability-text">
+                <span class="nv-sustainability-badge">100% Recyclé</span>
+                <div class="nv-sustainability-quote">« Construire aujourd’hui pour préserver demain. »</div>
+                <h2>100% Engagement Durable</h2>
+                <p>Valoreco s’engage pour l’environnement avec des matériaux composites recyclés, une production responsable et des solutions certifiées pour un avenir durable. Notre expertise s’appuie sur l’innovation, la recherche et la passion pour la qualité.</p>
+                <ul class="nv-sustainability-list nv-sustainability-list-icons">
+                    <li><span class="nv-sustainability-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 15C3 9 9 3 15 3C15 9 9 15 3 15Z" stroke="#005a2e" stroke-width="2" fill="none"/></svg></span>Matériaux recyclés et recyclables</li>
+                    <li><span class="nv-sustainability-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 15C3 9 9 3 15 3C15 9 9 15 3 15Z" stroke="#005a2e" stroke-width="2" fill="none"/></svg></span>Résistance aux UV, intempéries et feu</li>
+                    <li><span class="nv-sustainability-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 15C3 9 9 3 15 3C15 9 9 15 3 15Z" stroke="#005a2e" stroke-width="2" fill="none"/></svg></span>Sans entretien, longue durée de vie</li>
+                    <li><span class="nv-sustainability-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 15C3 9 9 3 15 3C15 9 9 15 3 15Z" stroke="#005a2e" stroke-width="2" fill="none"/></svg></span>Respect des normes internationales</li>
+                </ul>
+                <a href="#" class="btn btn-secondary nv-sustainability-btn">Notre démarche RSE</a>
+            </div>
+            <div class="nv-sustainability-img">
+                <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=500&q=80" alt="Sustainability Valoreco" />
+            </div>
+        </div>
+    </section>
+
+    <!-- PARTENAIRES SECTION -->
+    <section class="partners-section">
+        <div class="container">
+            <h2 class="partners-title">Nos partenaires</h2>
+            <div class="partners-logos-grid">
+                <div class="partner-logo-card"><svg width="90" height="40" viewBox="0 0 90 40" fill="none"><rect width="90" height="40" rx="10" fill="#e9ecef"/><text x="50%" y="55%" text-anchor="middle" fill="#adb5bd" font-size="16" font-family="Inter, Arial" dy=".3em">LOGO 1</text></svg></div>
+                <div class="partner-logo-card"><svg width="90" height="40" viewBox="0 0 90 40" fill="none"><rect width="90" height="40" rx="10" fill="#e9ecef"/><text x="50%" y="55%" text-anchor="middle" fill="#adb5bd" font-size="16" font-family="Inter, Arial" dy=".3em">LOGO 2</text></svg></div>
+                <div class="partner-logo-card"><svg width="90" height="40" viewBox="0 0 90 40" fill="none"><rect width="90" height="40" rx="10" fill="#e9ecef"/><text x="50%" y="55%" text-anchor="middle" fill="#adb5bd" font-size="16" font-family="Inter, Arial" dy=".3em">LOGO 3</text></svg></div>
+                <div class="partner-logo-card"><svg width="90" height="40" viewBox="0 0 90 40" fill="none"><rect width="90" height="40" rx="10" fill="#e9ecef"/><text x="50%" y="55%" text-anchor="middle" fill="#adb5bd" font-size="16" font-family="Inter, Arial" dy=".3em">LOGO 4</text></svg></div>
+                <div class="partner-logo-card"><svg width="90" height="40" viewBox="0 0 90 40" fill="none"><rect width="90" height="40" rx="10" fill="#e9ecef"/><text x="50%" y="55%" text-anchor="middle" fill="#adb5bd" font-size="16" font-family="Inter, Arial" dy=".3em">LOGO 5</text></svg></div>
+                <div class="partner-logo-card"><svg width="90" height="40" viewBox="0 0 90 40" fill="none"><rect width="90" height="40" rx="10" fill="#e9ecef"/><text x="50%" y="55%" text-anchor="middle" fill="#adb5bd" font-size="16" font-family="Inter, Arial" dy=".3em">LOGO 6</text></svg></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REALISATIONS SECTION -->
+    <section class="realisations-section">
+        <div class="container">
+            <div class="realisations-header-row">
+                <div class="realisations-title-col">
+                    <h2 class="realisations-title">Nos <strong>réalisations</strong></h2>
+                </div>
+                <div class="realisations-link-col">
+                    <a class="realisations-link" href="#">Tous les projets <span class="realisations-link-arrow">→</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="realisations-grid-container">
+            <div class="realisations-grid">
+                <div class="realisations-card">
+                    <a class="realisations-img-link" href="#"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80" alt="Projet 1" /></a>
+                    <div class="realisations-caption">
+                        <h5 class="realisations-card-title"><a href="#">Tour CFC</a></h5>
+                        <div class="realisations-card-badge"><span class="realisations-card-marker">📍</span> Casablanca Finance City</div>
+                    </div>
+                </div>
+                <div class="realisations-card">
+                    <a class="realisations-img-link" href="#"><img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=600&q=80" alt="Projet 2" /></a>
+                    <div class="realisations-caption">
+                        <h5 class="realisations-card-title"><a href="#">Résidence Anfa</a></h5>
+                        <div class="realisations-card-badge"><span class="realisations-card-marker">📍</span> Casablanca</div>
+                    </div>
+                </div>
+                <div class="realisations-card">
+                    <a class="realisations-img-link" href="#"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" alt="Projet 3" /></a>
+                    <div class="realisations-caption">
+                        <h5 class="realisations-card-title"><a href="#">Tour Rabat</a></h5>
+                        <div class="realisations-card-badge"><span class="realisations-card-marker">📍</span> Rabat</div>
+                    </div>
+                </div>
+                <div class="realisations-card">
+                    <a class="realisations-img-link" href="#"><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=600&q=80" alt="Projet 4" /></a>
+                    <div class="realisations-caption">
+                        <h5 class="realisations-card-title"><a href="#">Hôtel Marrakech</a></h5>
+                        <div class="realisations-card-badge"><span class="realisations-card-marker">📍</span> Marrakech</div>
+                    </div>
+                </div>
+                <div class="realisations-card">
+                    <a class="realisations-img-link" href="#"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80" alt="Projet 5" /></a>
+                    <div class="realisations-caption">
+                        <h5 class="realisations-card-title"><a href="#">Résidence Agadir</a></h5>
+                        <div class="realisations-card-badge"><span class="realisations-card-marker">📍</span> Agadir</div>
+                    </div>
+                </div>
+                <div class="realisations-card">
+                    <a class="realisations-img-link" href="#"><img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80" alt="Projet 6" /></a>
+                    <div class="realisations-caption">
+                        <h5 class="realisations-card-title"><a href="#">Business Center</a></h5>
+                        <div class="realisations-card-badge"><span class="realisations-card-marker">📍</span> Tanger</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container d-block d-sm-none">
+            <div class="realisations-link-mobile">
+                <a class="realisations-link" href="#">Tous les projets <span class="realisations-link-arrow">→</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- POURQUOI VALORECO SECTION -->
+    <section class="nv-pourquoi-valoreco nv-section-divider">
+        <div class="container">
+            <h2 class="nv-pourquoi-title">Pourquoi <span class="highlight">Valoreco</span> ?</h2>
+            <div class="nv-pourquoi-grid">
+                <div class="nv-pourquoi-card">
+                    <img class="nv-pourquoi-img" src="https://images.unsplash.com/photo-1556740772-1a741367b93e?auto=format&fit=crop&w=400&q=80" alt="Prix Compétitifs" width="180" height="auto" loading="lazy" />
+                    <h3>Prix Compétitifs</h3>
+                    <p>Des solutions haut de gamme à des tarifs étudiés pour garantir le meilleur rapport qualité-prix sur le marché marocain.</p>
+                </div>
+                <div class="nv-pourquoi-card">
+                    <img class="nv-pourquoi-img" src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80" alt="Exclusivité Produits" width="180" height="auto" loading="lazy" />
+                    <h3>Exclusivité Produits</h3>
+                    <p>Distributeur exclusif de produits innovants et performants, introuvables ailleurs au Maroc.</p>
+                </div>
+                <div class="nv-pourquoi-card">
+                    <img class="nv-pourquoi-img" src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Engagement Écologique" width="180" height="auto" loading="lazy" />
+                    <h3>Engagement Écologique</h3>
+                    <p>Matériaux recyclés et recyclables, production responsable et respectueuse de l’environnement.</p>
+                </div>
+                <div class="nv-pourquoi-card">
+                    <img class="nv-pourquoi-img" src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=400&q=80" alt="Responsabilité & Qualité" width="180" height="auto" loading="lazy" style="aspect-ratio: 16/9; object-fit: cover;" />
+                    <h3>Responsabilité & Qualité</h3>
+                    <p>Respect des normes internationales, suivi rigoureux et accompagnement personnalisé pour chaque projet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & CTA SECTION -->
+    <section class="nv-contact-cta nv-section-divider">
+        <div class="container">
+            <h2 class="nv-contact-title">Contactez-nous</h2>
+            <div class="nv-contact-cta-row">
+                <button class="btn btn-primary nv-catalogue-btn">Télécharger le catalogue</button>
+                <button class="btn btn-secondary nv-devis-btn" id="showDevisFormBtn">Demander un devis</button>
+            </div>
+            <form class="nv-devis-form" id="devisForm" style="display:none;max-width:500px;margin:2rem auto 0;">
+                <div class="form-group">
+                    <label for="devisName">Nom</label>
+                    <input type="text" id="devisName" name="devisName" required />
+                </div>
+                <div class="form-group">
+                    <label for="devisCompany">Société</label>
+                    <input type="text" id="devisCompany" name="devisCompany" />
+                </div>
+                <div class="form-group">
+                    <label for="devisSubject">Sujet</label>
+                    <input type="text" id="devisSubject" name="devisSubject" required />
+                </div>
+                <div class="form-group">
+                    <label for="devisMessage">Message</label>
+                    <textarea id="devisMessage" name="devisMessage" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="devisEmail">Email</label>
+                    <input type="email" id="devisEmail" name="devisEmail" required />
+                </div>
+                <button type="submit" class="btn btn-primary">Demander un devis</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FAQ / Q&A SECTION -->
+    <section class="nv-faq">
+        <div class="container">
+            <h2 class="nv-faq-title">Questions fréquentes</h2>
+            <div class="nv-faq-list">
+                <div class="nv-faq-item">
+                    <button class="nv-faq-question">Qu'est-ce que le composite bois plastique (WPC) ?</button>
+                    <div class="nv-faq-answer">Le WPC (Wood Plastic Composite) est un matériau composé de 70% de fibres de bois naturel et 30% de polyéthylène. Il combine l’élégance du bois et la durabilité du composite.</div>
+                </div>
+                <div class="nv-faq-item">
+                    <button class="nv-faq-question">Quels sont les avantages du composite Valoreco ?</button>
+                    <div class="nv-faq-answer">Longue durée de vie, résistance aux UV, à l’eau, au feu, sans échardes, sans entretien, recyclable et respectueux de l’environnement.</div>
+                </div>
+                <div class="nv-faq-item">
+                    <button class="nv-faq-question">Le composite Valoreco nécessite-t-il un entretien particulier ?</button>
+                    <div class="nv-faq-answer">Non, il ne nécessite aucun entretien particulier. Un simple nettoyage à l’eau suffit pour conserver son aspect d’origine.</div>
+                </div>
+                <div class="nv-faq-item">
+                    <button class="nv-faq-question">Le composite Valoreco résiste-t-il aux UV et aux intempéries ?</button>
+                    <div class="nv-faq-answer">Oui, grâce à sa formulation et à ses pigments, il résiste parfaitement aux UV, à la pluie, au gel et aux variations de température.</div>
+                </div>
+                <div class="nv-faq-item">
+                    <button class="nv-faq-question">Le composite Valoreco résiste-t-il à l’air marin et à l’eau salée ?</button>
+                    <div class="nv-faq-answer">Oui, grâce à sa composition polymère, le composite Valoreco résiste parfaitement à la corrosion due au climat marin et à l’eau salée. Il agit également comme barrière contre la prolifération des champignons et moisissures.</div>
+                </div>
+                <div class="nv-faq-item">
+                    <button class="nv-faq-question">Le composite Valoreco nécessite-t-il un entretien ou une peinture spéciale ?</button>
+                    <div class="nv-faq-answer">Non, les matériaux composites Valoreco ne nécessitent ni entretien particulier, ni peinture. Un simple nettoyage à l’eau ou avec un détergent neutre suffit. Ils sont 100% recyclables.</div>
+                </div>
+                <div class="nv-faq-item">
+                    <button class="nv-faq-question">Le composite Valoreco est-il plus cher que le bois classique ?</button>
+                    <div class="nv-faq-answer">Le composite Valoreco est plus cher que le bois tendre, mais son prix est similaire à celui des bois exotiques haut de gamme, tout en offrant une durabilité supérieure et moins d’entretien.</div>
+                </div>
+                <div class="nv-faq-item">
+                    <button class="nv-faq-question">Le composite Valoreco perd-il sa couleur avec le temps ?</button>
+                    <div class="nv-faq-answer">Non, grâce à l’ajout de pigments et d’absorbeurs UV, la couleur reste stable. Une légère variation de teinte (7-10%) peut apparaître au fil du temps, due à la libération naturelle de tanins du bois.</div>
+                </div>
+                <div class="nv-faq-item">
+                    <button class="nv-faq-question">Le composite Valoreco est-il résistant au feu ?</button>
+                    <div class="nv-faq-answer">Oui, le composite Valoreco offre une excellente résistance au feu et répond aux normes européennes de sécurité incendie pour les matériaux de construction.</div>
+                </div>
+                <div class="nv-faq-item">
+                    <button class="nv-faq-question">Le composite Valoreco est-il résistant à l’eau et à l’humidité ?</button>
+                    <div class="nv-faq-answer">Oui, il est conçu pour résister à l’eau et à l’humidité grâce à ses fibres encapsulées et ses propriétés hydrofuges.</div>
+                </div>
+                <div class="nv-faq-item">
+                    <button class="nv-faq-question">Le composite Valoreco supporte-t-il les variations de température ?</button>
+                    <div class="nv-faq-answer">Oui, il conserve ses propriétés mécaniques entre -20°C et +80°C, sans se déformer ni se fissurer.</div>
+                </div>
+                <div class="nv-faq-item">
+                    <button class="nv-faq-question">Le composite Valoreco est-il recyclable ?</button>
+                    <div class="nv-faq-answer">Oui, il est recyclable jusqu’à 20 fois sans perte de qualité, contribuant ainsi à une économie circulaire durable.</div>
+                </div>
+                <div class="nv-faq-item">
+                    <button class="nv-faq-question">Peut-on installer le composite Valoreco sur n’importe quelle surface ?</button>
+                    <div class="nv-faq-answer">Le composite Valoreco doit être installé sur une base solide et bien drainée, de préférence sur une structure en aluminium ou composite pour garantir stabilité et longévité.</div>
+                </div>
+                <div class="nv-faq-item">
+                    <button class="nv-faq-question">Le composite Valoreco est-il adapté aux zones à fort passage ?</button>
+                    <div class="nv-faq-answer">Oui, il est idéal pour les terrasses, piscines, espaces publics et commerciaux grâce à sa résistance à l’usure et sa facilité d’entretien.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="assets/images/valoreco-logo.png" alt="Valoreco SARL Logo" class="footer-logo">
+                    <p>Solutions durables pour construction et agriculture</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="produits.html">Nos Produits</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Entreprise</h4>
+                    <ul>
+                        <li><a href="about.html">Qui sommes-nous</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Casablanca, Maroc</p>
+                    <p>contact@valoreco.ma</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">Facebook</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Valoreco SARL. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+    // FAQ accordion
+    document.querySelectorAll('.nv-faq-question').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const answer = this.nextElementSibling;
+            this.classList.toggle('active');
+            answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+        });
+    });
+
+    // Initialize Swiper
+    const heroSwiper = new Swiper('.hero-swiper', {
+        loop: true,
+        autoplay: { delay: 5000, disableOnInteraction: false },
+        pagination: { el: '.swiper-pagination', clickable: true },
+        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+        effect: 'fade',
+        fadeEffect: { crossFade: true },
+    });
+    </script>
+    <script>
+    // Show/hide devis form
+    document.addEventListener('DOMContentLoaded', function() {
+        var showDevisBtn = document.getElementById('showDevisFormBtn');
+        var devisForm = document.getElementById('devisForm');
+        if (showDevisBtn && devisForm) {
+            showDevisBtn.addEventListener('click', function() {
+                devisForm.style.display = devisForm.style.display === 'block' ? 'none' : 'block';
+                if (devisForm.style.display === 'block') {
+                    devisForm.scrollIntoView({behavior: 'smooth'});
+                }
+            });
+        }
+    });
+    </script>
+    <script>
+function openDevisForm(e) {
+    e.preventDefault();
+    var devisForm = document.getElementById('devisForm');
+    if (devisForm) {
+        devisForm.style.display = 'block';
+        devisForm.scrollIntoView({behavior: 'smooth'});
+    }
+}
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var hamburger = document.getElementById('hamburger-menu');
+    var navMenu = document.querySelector('.nav-menu');
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+        });
+        hamburger.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                navMenu.classList.toggle('active');
+            }
+        });
+    }
+});
+</script>
+</body>
+</html> 

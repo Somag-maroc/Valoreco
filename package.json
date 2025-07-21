@@ -1,0 +1,42 @@
+{
+  "name": "valoreco-website",
+  "version": "1.0.0",
+  "description": "Site web professionnel pour Valoreco SARL - Solutions durables pour construction et agriculture",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "npx serve .",
+    "dev": "npx live-server --port=8000",
+    "build": "echo 'Build completed'",
+    "test": "echo 'No tests specified'"
+  },
+  "keywords": [
+    "valoreco",
+    "construction",
+    "agriculture",
+    "novowood",
+    "films-plastiques",
+    "tubes-ppr",
+    "maroc",
+    "b2b"
+  ],
+  "author": "Valoreco SARL",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/valoreco/website.git"
+  },
+  "homepage": "https://valoreco.ma",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "serve": "^14.2.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+} 
