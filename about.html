@@ -6,6 +6,8 @@
     <title>Qui sommes-nous - Valoreco SARL</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <!-- Header Navigation -->
@@ -30,66 +32,819 @@
             </div>
         </nav>
     </header>
+
     <!-- About Hero Section -->
     <section class="about-hero">
         <div class="about-hero-bg"></div>
         <div class="about-hero-content">
             <img src="assets/images/valoreco-logo.png" alt="Valoreco SARL Logo" class="about-hero-logo-circle">
-            <h1 class="about-hero-title">À propos de Valoreco</h1>
-            <p class="about-hero-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Valoreco SARL, fournisseur marocain de solutions durables pour la construction et l'agriculture.</p>
+            <h1 class="about-hero-title">Qui sommes-nous ?</h1>
+            <p class="about-hero-desc">ValorEco est une entreprise marocaine fondée en 2023, spécialisée dans la vente et la distribution de matériaux d'architecture haut de gamme pour l'aménagement extérieur et intérieur.</p>
         </div>
     </section>
-    <!-- Vision Section -->
-    <section class="about-section split-section">
-        <div class="about-section-content">
-            <h2 class="about-section-title">Vision</h2>
-            <p class="about-section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod, urna eu tincidunt consectetur, nisi nisl aliquam enim, vitae facilisis enim erat nec enim.</p>
-        </div>
-        <div class="about-section-img">
-            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Vision" />
-        </div>
-    </section>
-    <!-- Mission Section -->
-    <section class="about-section split-section reverse">
-        <div class="about-section-content">
-            <h2 class="about-section-title">Mission</h2>
-            <p class="about-section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-        </div>
-        <div class="about-section-img">
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80" alt="Mission" />
-        </div>
-    </section>
-    <!-- Valeurs Section -->
-    <section class="about-section split-section">
-        <div class="about-section-content">
-            <h2 class="about-section-title">Valeurs</h2>
-            <p class="about-section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
-            <ul class="about-values-list">
-                <li>Excellence et qualité</li>
-                <li>Engagement environnemental</li>
-                <li>Réactivité et service client</li>
-                <li>Innovation continue</li>
-            </ul>
-        </div>
-        <div class="about-section-img">
-            <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80" alt="Valeurs" />
-        </div>
-    </section>
-    <!-- Notre équipe Section -->
-    <section class="about-section split-section reverse">
-        <div class="about-section-content">
-            <h2 class="about-section-title">Notre équipe</h2>
-            <p class="about-section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada.</p>
-            <div class="about-team-thumbnails">
-                <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Team 1" />
-                <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=400&q=80" alt="Team 2" />
-                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=400&q=80" alt="Team 3" />
+
+    <!-- Notre expertise Section -->
+    <section class="about-expertise-section">
+        <div class="container">
+            <div class="expertise-header">
+                <h2 class="expertise-title">Notre expertise</h2>
+                <p class="expertise-subtitle">Solutions architecturales haut de gamme pour l'aménagement extérieur et intérieur</p>
+            </div>
+            
+            <div class="expertise-content">
+                <div class="expertise-intro">
+                    <p>Nous proposons une sélection rigoureuse de produits reconnus pour leur qualité, leur esthétisme et leur durabilité, adaptés aux exigences du marché marocain et aux standards internationaux.</p>
+                    <p>Notre offre s'adresse aussi bien aux architectes, promoteurs, hôteliers, décorateurs qu'aux particuliers en quête de solutions premium et fiables pour leurs projets de construction, de rénovation ou d'embellissement.</p>
+                </div>
+                
+                <div class="expertise-grid">
+                    <div class="expertise-card">
+                        <div class="expertise-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                <polyline points="9,22 9,12 15,12 15,22"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Matériaux d'architecture</h3>
+                        <p>Bardages, terrasses, pergolas, plafonds décoratifs, revêtements muraux, marbre, carrelage, parquet et autres matériaux de finition</p>
+                    </div>
+                    
+                    <div class="expertise-card">
+                        <div class="expertise-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                            </svg>
+                        </div>
+                        <h3>Conseil sur mesure</h3>
+                        <p>Accompagnement des promoteurs, architectes et particuliers dans le choix des solutions adaptées à leurs projets</p>
+                    </div>
+                    
+                    <div class="expertise-card">
+                        <div class="expertise-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12l2 2 4-4"></path>
+                                <path d="M21 12c-1 0-2-.4-2-1s1-2 2-2 2 1 2 2-1 1-2 1z"></path>
+                                <path d="M3 12c1 0 2-.4 2-1s-1-2-2-2-2 1-2 2 1 1 2 1z"></path>
+                                <path d="M12 21c0-1 .4-2 1-2s2 1 2 2-1 2-2 2-1-1-1-2z"></path>
+                                <path d="M12 3c0 1-.4 2-1 2s-2-1-2-2 1-2 2-2 1 1 1 2z"></path>
+                            </svg>
+                        </div>
+                        <h3>Service complet</h3>
+                        <p>Échantillonnage personnalisé, formation produit, conseil technique, suivi qualité et assistance à la pose</p>
+                    </div>
+                </div>
+                
+                <div class="expertise-services">
+                    <h3>Notre service complet comprend :</h3>
+                    <div class="services-grid">
+                        <div class="service-item">
+                            <span class="service-number">01</span>
+                            <div class="service-content">
+                                <h4>Échantillonnage personnalisé</h4>
+                                <p>Pour permettre une sélection précise des matériaux</p>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-number">02</span>
+                            <div class="service-content">
+                                <h4>Formation produit</h4>
+                                <p>Destinée aux équipes de pose et prescripteurs</p>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-number">03</span>
+                            <div class="service-content">
+                                <h4>Conseil technique</h4>
+                                <p>Lors de la conception et de la prescription</p>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-number">04</span>
+                            <div class="service-content">
+                                <h4>Suivi technique</h4>
+                                <p>Et qualité tout au long de la réalisation</p>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-number">05</span>
+                            <div class="service-content">
+                                <h4>Assistance à la pose</h4>
+                                <p>Et accompagnement terrain</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="about-section-img">
-            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Notre équipe" />
+    </section>
+
+    <!-- Notre force Section -->
+    <section class="about-strength-section">
+        <div class="container">
+            <div class="strength-header">
+                <h2 class="strength-title">Notre force</h2>
+                <p class="strength-subtitle">L'excellence au service de l'architecture durable</p>
+            </div>
+            
+            <div class="strength-content">
+                <div class="strength-intro">
+                    <p>Notre force réside dans une expertise métier solide, un accompagnement sur mesure, et un réseau de partenaires reconnus pour leur savoir-faire dans les domaines de l'architecture, du revêtement et des solutions d'aménagement.</p>
+                </div>
+                
+                <div class="strength-grid">
+                    <div class="strength-card">
+                        <div class="strength-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                            </svg>
+                        </div>
+                        <h3>Expertise métier</h3>
+                        <p>Une expertise solide dans les domaines de l'architecture, du revêtement et des solutions d'aménagement</p>
+                    </div>
+                    
+                    <div class="strength-card">
+                        <div class="strength-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3>Accompagnement sur mesure</h3>
+                        <p>Un service personnalisé adapté aux besoins spécifiques de chaque projet</p>
+                    </div>
+                    
+                    <div class="strength-card">
+                        <div class="strength-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3>Réseau de partenaires</h3>
+                        <p>Un réseau de partenaires reconnus pour leur savoir-faire et leur excellence</p>
+                    </div>
+                </div>
+                
+                <div class="strength-vision">
+                    <div class="vision-content">
+                        <h3>Notre vision architecturale</h3>
+                        <p>Au-delà des tendances, nous croyons en une architecture qui traverse le temps, alliant l'élégance des matériaux nobles à la performance environnementale.</p>
+                        <div class="vision-ambition">
+                            <h4>Notre ambition</h4>
+                            <p>Devenir la référence marocaine dans la fourniture de matériaux architecturaux haut de gamme, tout en contribuant à élever les standards esthétiques, techniques et durables du secteur.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+
+    <!-- Mission et Valeurs Section -->
+    <section class="about-mission-section">
+        <div class="container">
+            <div class="mission-header">
+                <h2 class="mission-title">Notre mission & nos valeurs</h2>
+                <p class="mission-subtitle">Une croissance responsable fondée sur l'excellence</p>
+            </div>
+            
+            <div class="mission-content">
+                <div class="mission-intro">
+                    <p>Notre mission est de proposer aux professionnels et particuliers les meilleurs matériaux de dernière génération, tout en assurant un service sur mesure, de la prescription au suivi après-vente. Nous croyons en une croissance responsable, fondée sur des valeurs qui guident chacune de nos actions.</p>
+                </div>
+                
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                            </svg>
+                        </div>
+                        <h3>Excellence</h3>
+                        <p>Nous visons les plus hauts standards de qualité dans tout ce que nous entreprenons, de la sélection des matériaux à la relation client, pour garantir des résultats à la hauteur des attentes les plus exigeantes.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 3v18h18"></path>
+                                <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path>
+                            </svg>
+                        </div>
+                        <h3>Durabilité</h3>
+                        <p>Nous nous engageons à promouvoir des solutions responsables et durables, en intégrant des matériaux et des pratiques respectueuses de l'environnement tout au long du cycle de vie de nos projets.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12l2 2 4-4"></path>
+                                <path d="M21 12c-1 0-2-.4-2-1s1-2 2-2 2 1 2 2-1 1-2 1z"></path>
+                                <path d="M3 12c1 0 2-.4 2-1s-1-2-2-2-2 1-2 2 1 1 2 1z"></path>
+                                <path d="M12 21c0-1 .4-2 1-2s2 1 2 2-1 2-2 2-1-1-1-2z"></path>
+                                <path d="M12 3c0 1-.4 2-1 2s-2-1-2-2 1-2 2-2 1 1 1 2z"></path>
+                            </svg>
+                        </div>
+                        <h3>Intégrité</h3>
+                        <p>Nous bâtissons des relations fondées sur la transparence, l'éthique et le respect de nos engagements, que ce soit avec nos clients, nos partenaires ou nos collaborateurs.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <h3>Fiabilité</h3>
+                        <p>Notre réactivité, notre professionnalisme et notre constance dans la qualité de service font de nous un partenaire de confiance sur le long terme.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                        </div>
+                        <h3>Écoute client</h3>
+                        <p>Chaque projet est unique : nous plaçons l'écoute au cœur de notre démarche pour proposer des solutions sur mesure, en parfaite adéquation avec les besoins réels de nos clients.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                <polyline points="9,22 9,12 15,12 15,22"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Engagement local</h3>
+                        <p>Implantés au Maroc, nous valorisons les savoir-faire locaux, contribuons au développement économique national, et entretenons des liens solides avec les acteurs de notre territoire.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Vision Section -->
+    <section class="about-vision-section">
+        <div class="container">
+            <div class="vision-header">
+                <h2 class="vision-title">Notre vision</h2>
+                <p class="vision-subtitle">Faire de l'élégance durable la norme</p>
+            </div>
+            
+            <div class="vision-content">
+                <div class="vision-intro">
+                    <p>À long terme, ValorEco vise à devenir un acteur de référence sur le marché marocain en élargissant son portefeuille de matériaux innovants et en tissant un réseau de partenaires solides dans le monde.</p>
+                </div>
+                
+                <div class="vision-ambitions">
+                    <div class="ambition-card">
+                        <div class="ambition-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                            </svg>
+                        </div>
+                        <h3>Acteur de référence</h3>
+                        <p>Devenir un acteur de référence sur le marché marocain en élargissant son portefeuille de matériaux innovants</p>
+                    </div>
+                    
+                    <div class="ambition-card">
+                        <div class="ambition-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3>Réseau international</h3>
+                        <p>Tisser un réseau de partenaires solides dans le monde pour une expertise globale</p>
+                    </div>
+                    
+                    <div class="ambition-card">
+                        <div class="ambition-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 3v18h18"></path>
+                                <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path>
+                            </svg>
+                        </div>
+                        <h3>Standards durables</h3>
+                        <p>Redéfinir les standards du design extérieur et intérieur haut de gamme, dans une logique de croissance durable</p>
+                    </div>
+                </div>
+                
+                <div class="vision-statement">
+                    <div class="statement-content">
+                        <h3>L'élégance durable comme norme</h3>
+                        <p>Notre ambition est de redéfinir les standards du design extérieur et intérieur haut de gamme, dans une logique de croissance durable. Nous croyons en une architecture qui allie beauté, performance et respect de l'environnement.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Partenariats Section -->
+    <section class="about-partnerships-section">
+        <div class="container">
+            <div class="partnerships-header">
+                <h2 class="partnerships-title">Partenariats stratégiques</h2>
+                <p class="partnerships-subtitle">Un réseau de partenaires d'excellence</p>
+            </div>
+            
+            <div class="partnerships-content">
+                <div class="partnerships-intro">
+                    <p>ValorEco s'appuie sur un réseau de partenaires reconnus pour la qualité supérieure de leurs produits et leur expertise métier dans les revêtements, carrelages et matériaux d'aménagement.</p>
+                    <p>Ces collaborations nous permettent d'offrir à nos clients des solutions haut de gamme, fiables et parfaitement adaptées aux exigences du marché marocain, tout en intégrant une dimension durable et performante.</p>
+                </div>
+                
+                <div class="partnerships-grid">
+                    <div class="partnership-card featured">
+                        <div class="partnership-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="partnership-badge">Partenaire clé</div>
+                        <h3>Novowood</h3>
+                        <p class="partnership-country">Italie</p>
+                        <p>Référence italienne dans les composites recyclés, spécialisée dans les solutions durables et innovantes pour l'aménagement extérieur et intérieur.</p>
+                    </div>
+                    
+                    <div class="partnership-card">
+                        <div class="partnership-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 3v18h18"></path>
+                                <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path>
+                            </svg>
+                        </div>
+                        <h3>Fabricants italiens</h3>
+                        <p class="partnership-country">Italie</p>
+                        <p>Collaborations stratégiques avec des fabricants italiens reconnus pour leur savoir-faire traditionnel et leur innovation dans les matériaux d'aménagement.</p>
+                    </div>
+                    
+                    <div class="partnership-card">
+                        <div class="partnership-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12l2 2 4-4"></path>
+                                <path d="M21 12c-1 0-2-.4-2-1s1-2 2-2 2 1 2 2-1 1-2 1z"></path>
+                                <path d="M3 12c1 0 2-.4 2-1s-1-2-2-2-2 1-2 2 1 1 2 1z"></path>
+                                <path d="M12 21c0-1 .4-2 1-2s2 1 2 2-1 2-2 2-1-1-1-2z"></path>
+                                <path d="M12 3c0 1-.4 2-1 2s-2-1-2-2 1-2 2-2 1 1 1 2z"></path>
+                            </svg>
+                        </div>
+                        <h3>Fabricants espagnols</h3>
+                        <p class="partnership-country">Espagne</p>
+                        <p>Partenariats avec des fabricants espagnols experts dans les revêtements et carrelages de haute qualité, alliant tradition et modernité.</p>
+                    </div>
+                    
+                    <div class="partnership-card">
+                        <div class="partnership-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <h3>Fabricants turcs</h3>
+                        <p class="partnership-country">Turquie</p>
+                        <p>Collaborations avec des fabricants turcs reconnus pour leur excellence dans la production de matériaux d'aménagement et leur compétitivité.</p>
+                    </div>
+                </div>
+                
+                <div class="partnerships-benefits">
+                    <h3>Les avantages de nos partenariats</h3>
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <span class="benefit-number">01</span>
+                            <div class="benefit-content">
+                                <h4>Qualité supérieure</h4>
+                                <p>Produits de référence dans leurs domaines respectifs</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-number">02</span>
+                            <div class="benefit-content">
+                                <h4>Expertise métier</h4>
+                                <p>Savoir-faire reconnu dans les revêtements et matériaux</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-number">03</span>
+                            <div class="benefit-content">
+                                <h4>Solutions adaptées</h4>
+                                <p>Parfaitement adaptées aux exigences du marché marocain</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-number">04</span>
+                            <div class="benefit-content">
+                                <h4>Dimension durable</h4>
+                                <p>Intégration de pratiques respectueuses de l'environnement</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pourquoi nous choisir Section -->
+    <section class="about-why-section">
+        <div class="container">
+            <div class="why-header">
+                <h2 class="why-title">Pourquoi nous choisir ?</h2>
+                <p class="why-subtitle">L'excellence au service de vos projets</p>
+            </div>
+            
+            <div class="why-content">
+                <div class="why-intro">
+                    <p>Découvrez les raisons qui font de ValorEco votre partenaire de confiance pour tous vos projets d'aménagement haut de gamme.</p>
+                </div>
+                
+                <div class="why-grid">
+                    <div class="why-card">
+                        <div class="why-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                            </svg>
+                        </div>
+                        <h3>Approche projet intégrée</h3>
+                        <p>Alliant esthétique, technicité, durabilité et culture du détail pour des résultats exceptionnels</p>
+                    </div>
+                    
+                    <div class="why-card">
+                        <div class="why-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 3v18h18"></path>
+                                <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path>
+                            </svg>
+                        </div>
+                        <h3>Matériaux haut de gamme</h3>
+                        <p>Certifiés, durables et parfaitement adaptés au climat marocain</p>
+                    </div>
+                    
+                    <div class="why-card">
+                        <div class="why-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                        </div>
+                        <h3>Service sur mesure</h3>
+                        <p>Réactif et à l'écoute des besoins spécifiques de chaque client</p>
+                    </div>
+                    
+                    <div class="why-card">
+                        <div class="why-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12l2 2 4-4"></path>
+                                <path d="M21 12c-1 0-2-.4-2-1s1-2 2-2 2 1 2 2-1 1-2 1z"></path>
+                                <path d="M3 12c1 0 2-.4 2-1s-1-2-2-2-2 1-2 2 1 1 2 1z"></path>
+                                <path d="M12 21c0-1 .4-2 1-2s2 1 2 2-1 2-2 2-1-1-1-2z"></path>
+                                <path d="M12 3c0 1-.4 2-1 2s-2-1-2-2 1-2 2-2 1 1 1 2z"></path>
+                            </svg>
+                        </div>
+                        <h3>Expertise technique solide</h3>
+                        <p>Dans le bâtiment, l'architecture et l'aménagement</p>
+                    </div>
+                    
+                    <div class="why-card">
+                        <div class="why-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3>Compréhension fine</h3>
+                        <p>Des exigences des architectes, promoteurs, hôteliers et particuliers</p>
+                    </div>
+                    
+                    <div class="why-card">
+                        <div class="why-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <h3>Structure agile</h3>
+                        <p>Proche du terrain, capable de s'adapter rapidement aux contraintes des projets</p>
+                    </div>
+                    
+                    <div class="why-card">
+                        <div class="why-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                <polyline points="9,22 9,12 15,12 15,22"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Engagement clair</h3>
+                        <p>À élever les standards du marché marocain, en s'inspirant des meilleures pratiques internationales</p>
+                    </div>
+                    
+                    <div class="why-card">
+                        <div class="why-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3>Réseau de partenaires</h3>
+                        <p>Reconnus pour leur fiabilité et leur excellence produit</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ancrage local Section -->
+    <section class="about-local-section">
+        <div class="container">
+            <div class="local-header">
+                <h2 class="local-title">Ancrage local, ambition durable</h2>
+                <p class="local-subtitle">Fiers de nos racines marocaines</p>
+            </div>
+            
+            <div class="local-content">
+                <div class="local-intro">
+                    <p>ValorEco est une entreprise marocaine, fière de ses racines et consciente des spécificités du marché local.</p>
+                    <p>Nous voulons contribuer activement à l'élévation du niveau de qualité dans les projets immobiliers au Maroc, en apportant des solutions respectueuses des ressources, du climat et des identités locales, avec une ouverture constante sur les innovations globales.</p>
+                </div>
+                
+                <div class="local-grid">
+                    <div class="local-card">
+                        <div class="local-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                <polyline points="9,22 9,12 15,12 15,22"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Racines marocaines</h3>
+                        <p>Une entreprise marocaine, fière de ses racines et consciente des spécificités du marché local</p>
+                    </div>
+                    
+                    <div class="local-card">
+                        <div class="local-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                            </svg>
+                        </div>
+                        <h3>Élévation des standards</h3>
+                        <p>Contribuer activement à l'élévation du niveau de qualité dans les projets immobiliers au Maroc</p>
+                    </div>
+                    
+                    <div class="local-card">
+                        <div class="local-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 3v18h18"></path>
+                                <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path>
+                            </svg>
+                        </div>
+                        <h3>Solutions respectueuses</h3>
+                        <p>Des solutions respectueuses des ressources, du climat et des identités locales</p>
+                    </div>
+                    
+                    <div class="local-card">
+                        <div class="local-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3>Innovation globale</h3>
+                        <p>Une ouverture constante sur les innovations globales tout en préservant l'identité locale</p>
+                    </div>
+                </div>
+                
+                <div class="local-commitment">
+                    <div class="commitment-content">
+                        <h3>Notre engagement pour le Maroc</h3>
+                        <p>Nous nous engageons à être un acteur responsable du développement durable au Maroc, en combinant l'excellence internationale avec la sensibilité aux spécificités locales.</p>
+                        <div class="commitment-features">
+                            <div class="commitment-feature">
+                                <div class="feature-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M3 3v18h18"></path>
+                                        <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path>
+                                    </svg>
+                                </div>
+                                <span>Développement durable</span>
+                            </div>
+                            <div class="commitment-feature">
+                                <div class="feature-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                    </svg>
+                                </div>
+                                <span>Excellence locale</span>
+                            </div>
+                            <div class="commitment-feature">
+                                <div class="feature-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                </div>
+                                <span>Partnerships locaux</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publics cibles Section -->
+    <section class="about-targets-section">
+        <div class="container">
+            <div class="targets-header">
+                <h2 class="targets-title">Publics cibles</h2>
+                <p class="targets-subtitle">Nos partenaires de confiance</p>
+            </div>
+            
+            <div class="targets-content">
+                <div class="targets-intro">
+                    <p>Nous travaillons en priorité avec des professionnels et particuliers exigeants, partageant notre vision d'excellence et de durabilité.</p>
+                </div>
+                
+                <div class="targets-grid">
+                    <div class="target-card">
+                        <div class="target-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                            </svg>
+                        </div>
+                        <h3>Architectes & Designers</h3>
+                        <p>Bureaux d'études et professionnels de la conception architecturale</p>
+                    </div>
+                    
+                    <div class="target-card">
+                        <div class="target-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                <polyline points="9,22 9,12 15,12 15,22"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Promoteurs immobiliers</h3>
+                        <p>Entreprises de construction et développeurs immobiliers</p>
+                    </div>
+                    
+                    <div class="target-card">
+                        <div class="target-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3>Chaînes hôtelières</h3>
+                        <p>Projets touristiques et établissements d'hébergement</p>
+                    </div>
+                    
+                    <div class="target-card">
+                        <div class="target-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <h3>Particuliers exigeants</h3>
+                        <p>Résidences haut de gamme, rénovations et projets sur mesure</p>
+                    </div>
+                </div>
+                
+                <div class="targets-approach">
+                    <div class="approach-content">
+                        <h3>Notre approche client</h3>
+                        <p>Chaque client bénéficie d'un accompagnement personnalisé, adapté à ses besoins spécifiques et à la nature de son projet.</p>
+                        <div class="approach-features">
+                            <div class="approach-feature">
+                                <span class="approach-number">01</span>
+                                <div class="approach-text">
+                                    <h4>Écoute attentive</h4>
+                                    <p>Compréhension approfondie des besoins et contraintes</p>
+                                </div>
+                            </div>
+                            <div class="approach-feature">
+                                <span class="approach-number">02</span>
+                                <div class="approach-text">
+                                    <h4>Conseil expert</h4>
+                                    <p>Recommandations techniques et esthétiques adaptées</p>
+                                </div>
+                            </div>
+                            <div class="approach-feature">
+                                <span class="approach-number">03</span>
+                                <div class="approach-text">
+                                    <h4>Accompagnement complet</h4>
+                                    <p>Du conseil initial au suivi post-installation</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Le fondateur Section -->
+    <section class="about-founder-section">
+        <div class="container">
+            <div class="founder-header">
+                <h2 class="founder-title">Le fondateur</h2>
+                <p class="founder-subtitle">Leadership visionnaire et engagement durable</p>
+            </div>
+            
+            <div class="founder-content">
+                <div class="founder-intro">
+                    <p>Zouheir Hijri, fondateur de ValorEco, incarne une nouvelle génération de dirigeants marocains à la croisée du leadership stratégique et de l'engagement dans la durabilité.</p>
+                </div>
+                
+                <div class="founder-profile">
+                    <div class="founder-info">
+                        <div class="founder-avatar">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <div class="founder-details">
+                            <h3>Zouheir Hijri</h3>
+                            <p class="founder-role">Fondateur & Directeur Général</p>
+                            <p class="founder-education">Diplômé de l'École nationale des ponts et chaussées</p>
+                        </div>
+                    </div>
+                    
+                    <div class="founder-experience">
+                        <h4>Plus de 15 ans d'expérience</h4>
+                        <p>Fort de plus de 15 ans d'expérience dans des fonctions de direction stratégique au sein de grandes entreprises industrielles, il apporte à ValorEco une vision claire, structurée et tournée vers l'excellence.</p>
+                    </div>
+                </div>
+                
+                <div class="founder-expertise">
+                    <h3>Ses domaines d'expertise</h3>
+                    <div class="expertise-grid">
+                        <div class="expertise-item">
+                            <div class="expertise-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                </svg>
+                            </div>
+                            <h4>Leadership stratégique</h4>
+                            <p>Vision claire et structurée tournée vers l'excellence</p>
+                        </div>
+                        
+                        <div class="expertise-item">
+                            <div class="expertise-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M3 3v18h18"></path>
+                                    <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path>
+                                </svg>
+                            </div>
+                            <h4>Environnements complexes</h4>
+                            <p>Connaissance fine des environnements complexes et leadership éprouvé</p>
+                        </div>
+                        
+                        <div class="expertise-item">
+                            <div class="expertise-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 12l2 2 4-4"></path>
+                                    <path d="M21 12c-1 0-2-.4-2-1s1-2 2-2 2 1 2 2-1 1-2 1z"></path>
+                                    <path d="M3 12c1 0 2-.4 2-1s-1-2-2-2-2 1-2 2 1 1 2 1z"></path>
+                                    <path d="M12 21c0-1 .4-2 1-2s2 1 2 2-1 2-2 2-1-1-1-2z"></path>
+                                    <path d="M12 3c0 1-.4 2-1 2s-2-1-2-2 1-2 2-2 1 1 1 2z"></path>
+                                </svg>
+                            </div>
+                            <h4>Impact environnemental</h4>
+                            <p>Forte sensibilité à l'impact environnemental des projets</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="founder-vision">
+                    <div class="vision-content">
+                        <h3>Sa vision pour ValorEco</h3>
+                        <p>Son parcours reflète une capacité à concilier performance économique et transformation responsable, dans un esprit de rigueur, d'innovation et de confiance. Son engagement est aujourd'hui au service d'une ambition claire : mettre la durabilité et la qualité au cœur des choix de matériaux dans la construction marocaine.</p>
+                        <div class="vision-quote">
+                            <blockquote>
+                                "Mettre la durabilité et la qualité au cœur des choix de matériaux dans la construction marocaine"
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -126,6 +881,7 @@
             </div>
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
-</html> 
+</html>  
