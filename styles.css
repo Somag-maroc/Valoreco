@@ -157,6 +157,15 @@ body {
     padding: 0;
 }
 
+/* Hamburger menu - hidden by default */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+    padding: var(--marken-spacing-sm);
+}
+
 .nav-link {
     text-decoration: none;
     color: var(--marken-primary);
@@ -2199,6 +2208,7 @@ body {
         flex-direction: column;
         cursor: pointer;
         gap: 4px;
+        padding: var(--marken-spacing-sm);
     }
     
     .hamburger .bar {
@@ -2206,6 +2216,66 @@ body {
         height: 3px;
         background: var(--marken-primary);
         transition: var(--marken-transition);
+    }
+
+    /* Hamburger active state */
+    .hamburger.active .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+    /* Mobile menu active state */
+    .nav-menu.marken-nav.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--marken-white);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        padding: var(--marken-spacing-lg);
+        z-index: 1000;
+        border-top: 1px solid var(--marken-border);
+    }
+
+    .nav-menu.marken-nav.active .nav-link {
+        padding: var(--marken-spacing-md) 0;
+        border-bottom: 1px solid var(--marken-border);
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-menu.marken-nav.active .nav-link:last-child {
+        border-bottom: none;
+    }
+
+    .nav-menu.marken-nav.active .dropdown {
+        position: static;
+        width: 100%;
+    }
+
+    .nav-menu.marken-nav.active .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background: var(--marken-light-gray);
+        margin-top: var(--marken-spacing-sm);
+        padding: var(--marken-spacing-sm);
+        border-radius: 8px;
+    }
+
+    .nav-menu.marken-nav.active .dropdown.active .dropdown-menu {
+        display: block;
     }
     
     .search-form {
