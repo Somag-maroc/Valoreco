@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test - Valoreco SARL</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/valoreco-logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/valoreco-logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/valoreco-logo.png">
+    <link rel="manifest" href="./site.webmanifest">
+    
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        /* Test styles to verify CSS loading */
+        .test-header {
+            background: #004225;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        .test-content {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .test-button {
+            background: #004225;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 1rem;
+        }
+        .test-button:hover {
+            background: #005a2e;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-header">
+        <h1>Test Page - Valoreco</h1>
+        <p>Testing CSS and JavaScript loading</p>
+    </div>
+    
+    <div class="test-content">
+        <h2>CSS Test</h2>
+        <p>If you can see this styled text, CSS is working.</p>
+        
+        <h2>JavaScript Test</h2>
+        <button class="test-button" onclick="testJavaScript()">Click to test JavaScript</button>
+        <div id="js-result"></div>
+        
+        <h2>Navigation Test</h2>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="about.html">About</a> |
+            <a href="contact.html">Contact</a>
+        </nav>
+        
+        <h2>Console Check</h2>
+        <p>Open browser console (F12) to see any errors.</p>
+    </div>
+    
+    <script>
+        function testJavaScript() {
+            document.getElementById('js-result').innerHTML = 'JavaScript is working!';
+            console.log('JavaScript test successful');
+        }
+        
+        // Check if CSS is loaded
+        window.addEventListener('load', function() {
+            const testElement = document.createElement('div');
+            testElement.style.position = 'absolute';
+            testElement.style.left = '-9999px';
+            testElement.style.background = 'red';
+            document.body.appendChild(testElement);
+            
+            const computedStyle = window.getComputedStyle(testElement);
+            console.log('CSS loading test:', computedStyle.background);
+            
+            document.body.removeChild(testElement);
+        });
+    </script>
+</body>
+</html> 

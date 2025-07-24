@@ -17,6 +17,290 @@ if (hamburger && navMenu) {
     });
 }
 
+// Marken Chat Popup Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const chatToggle = document.getElementById('chatToggle');
+    const chatPopup = document.getElementById('chatPopup');
+    const chatClose = document.getElementById('chatClose');
+    const chatInput = document.getElementById('chatInput');
+    const chatSend = document.getElementById('chatSend');
+    const chatBody = document.querySelector('.chat-body');
+
+    // Toggle chat popup
+    if (chatToggle && chatPopup) {
+        chatToggle.addEventListener('click', () => {
+            chatPopup.classList.add('active');
+            chatToggle.style.display = 'none';
+        });
+
+        chatClose.addEventListener('click', () => {
+            chatPopup.classList.remove('active');
+            chatToggle.style.display = 'flex';
+        });
+    }
+
+    // Send chat message
+    if (chatSend && chatInput) {
+        chatSend.addEventListener('click', sendMessage);
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+    }
+
+    function sendMessage() {
+        const message = chatInput.value.trim();
+        if (message) {
+            // Add user message
+            const userMessage = document.createElement('div');
+            userMessage.className = 'chat-message user-message';
+            userMessage.style.marginLeft = 'auto';
+            userMessage.style.marginRight = '0';
+            userMessage.style.background = 'var(--marken-accent)';
+            userMessage.style.color = 'white';
+            userMessage.innerHTML = `<p>${message}</p>`;
+            chatBody.insertBefore(userMessage, chatBody.lastElementChild);
+
+            // Clear input
+            chatInput.value = '';
+
+            // Simulate response
+            setTimeout(() => {
+                const response = document.createElement('div');
+                response.className = 'chat-message';
+                response.innerHTML = `<p>Merci pour votre message. Un de nos experts vous répondra dans les plus brefs délais.</p>`;
+                chatBody.insertBefore(response, chatBody.lastElementChild);
+                
+                // Scroll to bottom
+                chatBody.scrollTop = chatBody.scrollHeight;
+            }, 1000);
+        }
+    }
+
+    // Close chat when clicking outside
+    document.addEventListener('click', (e) => {
+        if (chatPopup && chatPopup.classList.contains('active')) {
+            if (!chatPopup.contains(e.target) && !chatToggle.contains(e.target)) {
+                chatPopup.classList.remove('active');
+                chatToggle.style.display = 'flex';
+            }
+        }
+    });
+});
+
+// Marken Header Hide/Show Scroll Effect
+let lastScrollY = window.scrollY;
+let isScrolling = false;
+
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('.header.marken-style');
+    
+    if (header) {
+        const currentScrollY = window.scrollY;
+        
+        // Add scrolled class when scrolling down
+        if (currentScrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+        
+        // Hide header when scrolling down, show when scrolling up
+        if (currentScrollY > lastScrollY && currentScrollY > 100) {
+            // Scrolling down - hide header
+            header.classList.add('hidden');
+            header.classList.remove('visible');
+        } else if (currentScrollY < lastScrollY) {
+            // Scrolling up - show header
+            header.classList.remove('hidden');
+            header.classList.add('visible');
+        }
+        
+        // Always show header at the top
+        if (currentScrollY <= 50) {
+            header.classList.remove('hidden');
+            header.classList.add('visible');
+        }
+        
+        lastScrollY = currentScrollY;
+    }
+});
+
+// Marken Button Hover Effects
+document.addEventListener('DOMContentLoaded', function() {
+    const markenButtons = document.querySelectorAll('.marken-btn');
+    
+    markenButtons.forEach(button => {
+        button.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-2px)';
+        });
+        
+        button.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+    
+    // Header "Demander un devis" button functionality
+    const headerDevisBtn = document.querySelector('.nav-actions .btn-track');
+    if (headerDevisBtn) {
+        headerDevisBtn.addEventListener('click', function() {
+            const contactSection = document.getElementById('contact');
+            if (contactSection) {
+                contactSection.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    }
+    
+    // "Télécharger le catalogue" button functionality
+    const catalogueBtn = document.querySelector('.btn-secondary.marken-btn[href="#"]');
+    if (catalogueBtn) {
+        catalogueBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('Le catalogue sera bientôt disponible au téléchargement.');
+        });
+    }
+    
+    // Product search functionality
+    const searchForm = document.querySelector('.search-form');
+    const searchInput = document.querySelector('.search-input');
+    const searchBtn = document.querySelector('.search-btn');
+    
+    if (searchForm && searchInput && searchBtn) {
+        searchForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            handleProductSearch();
+        });
+        
+        searchBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            handleProductSearch();
+        });
+        
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                handleProductSearch();
+            }
+        });
+    }
+    
+    function handleProductSearch() {
+        const searchTerm = searchInput.value.trim();
+        if (searchTerm) {
+            // Rediriger vers la page produits avec le terme de recherche
+            window.location.href = `produits.html?search=${encodeURIComponent(searchTerm)}`;
+        } else {
+            // Si aucun terme de recherche, rediriger vers la page produits
+            window.location.href = 'produits.html';
+        }
+    }
+});
+
+// FAQ Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        
+        question.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            
+            // Close all other FAQ items
+            faqItems.forEach(otherItem => {
+                otherItem.classList.remove('active');
+            });
+            
+            // Toggle current item
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        });
+    });
+});
+
+// Contact Form Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const phone = formData.get('phone');
+            const service = formData.get('service');
+            const message = formData.get('message');
+            
+            // Simple validation
+            if (!name || !email || !service || !message) {
+                alert('Veuillez remplir tous les champs obligatoires.');
+                return;
+            }
+            
+            // Simulate form submission
+            alert('Merci pour votre message ! Nous vous contacterons dans les plus brefs délais.');
+            this.reset();
+        });
+    }
+});
+
+// Dropdown Menu Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdowns = document.querySelectorAll('.dropdown');
+    
+    dropdowns.forEach(dropdown => {
+        const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
+        const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+        
+        // Desktop hover functionality
+        if (window.innerWidth > 900) {
+            dropdown.addEventListener('mouseenter', () => {
+                dropdownMenu.style.opacity = '1';
+                dropdownMenu.style.visibility = 'visible';
+                dropdownMenu.style.transform = 'translateY(0)';
+            });
+            
+            dropdown.addEventListener('mouseleave', () => {
+                dropdownMenu.style.opacity = '0';
+                dropdownMenu.style.visibility = 'hidden';
+                dropdownMenu.style.transform = 'translateY(-10px)';
+            });
+        }
+        
+        // Mobile click functionality
+        if (window.innerWidth <= 900) {
+            dropdownToggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                dropdown.classList.toggle('active');
+                
+                // Close other dropdowns
+                dropdowns.forEach(otherDropdown => {
+                    if (otherDropdown !== dropdown) {
+                        otherDropdown.classList.remove('active');
+                    }
+                });
+            });
+        }
+    });
+    
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.dropdown')) {
+            dropdowns.forEach(dropdown => {
+                dropdown.classList.remove('active');
+            });
+        }
+    });
+});
+
 // Initialize AOS (Animate On Scroll) - Only if available
 try {
     if (typeof AOS !== 'undefined') {

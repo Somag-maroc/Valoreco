@@ -4,40 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nos Produits - Valoreco SARL</title>
-    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/valoreco-logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/valoreco-logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/valoreco-logo.png">
+    <link rel="manifest" href="./site.webmanifest">
+    
+    <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header Navigation (same as homepage) -->
-    <header class="header">
+    <!-- Header Navigation -->
+    <header class="header marken-style visible">
         <nav class="navbar">
             <div class="nav-container">
                 <div class="nav-logo">
                     <img src="assets/images/valoreco-logo.png" alt="Valoreco SARL Logo" class="logo">
-                    <span class="logo-text">VALORECO</span>
+                    <span class="logo-text valoreco-text">ValorEco</span>
                 </div>
-                <div class="hamburger" id="hamburger-menu" tabindex="0" aria-label="Ouvrir le menu" role="button">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-                <ul class="nav-menu">
+                <ul class="nav-menu marken-nav">
                     <li class="nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
                     <li class="nav-item"><a href="produits.html" class="nav-link active">Nos Produits</a></li>
-                    <li class="nav-item"><a href="about.html" class="nav-link">Qui sommes-nous</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Qui sommes-nous</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="entreprise.html" class="dropdown-link">L'entreprise</a></li>
+                            <li><a href="mission.html" class="dropdown-link">Mission</a></li>
+                            <li><a href="vision.html" class="dropdown-link">Vision</a></li>
+                            <li><a href="valeurs.html" class="dropdown-link">Valeurs</a></li>
+                            <li><a href="partenariats.html" class="dropdown-link">Partenariats</a></li>
+                            <li><a href="fondateur.html" class="dropdown-link">Le fondateur</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
+                <div class="nav-actions">
+                    <a href="contact.html" class="btn-track">Demander un devis</a>
+                    <a href="#" class="btn-login">Connexion</a>
+                </div>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </div>
         </nav>
     </header>
+
     <!-- Hero Section -->
-    <section class="nv-hero nv-section-divider" style="padding: 100px 0 40px 0; position: relative; overflow: hidden;">
-        <div class="nv-hero-bg"></div>
+    <section class="hero marken-hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+            <div class="hero-sphere"></div>
+        </div>
         <div class="container">
-            <h1 class="nv-hero-title" style="color:var(--primary-green);">Notre Catalogue</h1>
-            <p class="nv-hero-subtitle" style="color:var(--gray);">Découvrez notre sélection de produits pour tous vos projets d’aménagement et de construction.</p>
+            <div class="hero-content">
+                <div class="hero-branding">
+                    <span class="brand-prefix">Découvrez</span>
+                    <div class="brand-logo">
+                        <span class="logo-text valoreco-text">ValorEco</span>
+                    </div>
+                </div>
+                <h1 class="hero-title">Notre Catalogue</h1>
+                <p class="hero-subtitle">Matériaux d'architecture haut de gamme</p>
+                <p class="hero-description">Découvrez notre sélection de produits pour tous vos projets d'aménagement et de construction. Des matériaux de qualité supérieure pour des résultats exceptionnels.</p>
+                <div class="hero-actions">
+                    <a href="#catalogue" class="btn-primary marken-btn">Explorer nos produits</a>
+                    <a href="contact.html" class="btn-secondary marken-btn">Demander un devis</a>
+                </div>
+            </div>
         </div>
     </section>
+
     <!-- Filter Bar -->
     <section class="catalogue-filters">
         <div class="container">
@@ -49,14 +90,16 @@
             </div>
         </div>
     </section>
+
     <!-- Product Grid -->
-    <section class="catalogue-products-section">
+    <section id="catalogue" class="catalogue-products-section">
         <div class="container">
             <div class="catalogue-products-grid" id="catalogue-products-grid">
                 <!-- Products will be injected by JS -->
             </div>
         </div>
     </section>
+
     <!-- Product Modal -->
     <div class="catalogue-modal-overlay" id="catalogue-modal-overlay" style="display:none;">
         <div class="catalogue-modal" id="catalogue-modal">
@@ -64,65 +107,89 @@
             <div id="catalogue-modal-content"></div>
         </div>
     </div>
-    <!-- Footer (same as homepage) -->
-    <footer class="footer">
+
+    <!-- CTA Section -->
+    <section class="cta-section marken-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Besoin d'un devis personnalisé ?</h2>
+                <p>Nos experts sont là pour vous accompagner dans le choix des meilleurs matériaux pour votre projet. Contactez-nous pour obtenir un devis sur mesure.</p>
+                <div class="cta-actions">
+                    <a href="contact.html" class="btn-primary marken-btn">Demander un devis</a>
+                    <a href="partenariats.html" class="btn-secondary marken-btn">Nos partenaires</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer marken-footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <img src="assets/images/valoreco-logo.png" alt="Valoreco SARL" class="footer-logo">
-                    <p>Solutions durables pour construction et agriculture</p>
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="entreprise.html">L'entreprise</a></li>
+                        <li><a href="mission.html">Mission</a></li>
+                        <li><a href="vision.html">Vision</a></li>
+                        <li><a href="valeurs.html">Valeurs</a></li>
+                    </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Solutions</h4>
                     <ul>
                         <li><a href="produits.html">Nos Produits</a></li>
+                        <li><a href="produit1.html">Matériaux Architecturaux</a></li>
+                        <li><a href="produit2.html">Films Plastiques</a></li>
+                        <li><a href="produit3.html">Solutions Durables</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Entreprise</h4>
+                    <h4>Network</h4>
                     <ul>
-                        <li><a href="about.html">Qui sommes-nous</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="partenariats.html">Partenariats</a></li>
+                        <li><a href="fondateur.html">Le fondateur</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Contact</h4>
                     <p>Casablanca, Maroc</p>
                     <p>contact@valoreco.ma</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link">LinkedIn</a>
-                        <a href="#" class="social-link">Facebook</a>
-                    </div>
+                    <p>+212 5 22 XX XX XX</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Valoreco SARL. Tous droits réservés.</p>
+                <div class="footer-legal">
+                    <a href="#">Mentions légales</a>
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">Conditions d'utilisation</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2024 ValorEco SARL. Tous droits réservés.</p>
+                </div>
             </div>
         </div>
     </footer>
+
     <script>
 // Hamburger menu
     document.addEventListener('DOMContentLoaded', function() {
-        var hamburger = document.getElementById('hamburger-menu');
+        var hamburger = document.querySelector('.hamburger');
         var navMenu = document.querySelector('.nav-menu');
         if (hamburger && navMenu) {
             hamburger.addEventListener('click', function() {
                 navMenu.classList.toggle('active');
             });
-            hamburger.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    navMenu.classList.toggle('active');
-                }
-            });
         }
     });
+
 // Product catalogue data
 const catalogueData = {
     novowood: [
-        { name: 'Profile Prestige 145', code: '145H22', section: '145x22 mm', length: '2200 mm', weight: '2,90 kg', colors: ['Sable', 'Bois', 'Cuivre', 'Gris foncé'], img: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80', desc: 'Lame composite élégante, idéale pour terrasses et piscines. Résistante à l’eau et aux UV.', longdesc: 'Les profils Prestige 145 peuvent être installés côté lisse ou rainuré, avec des clips de fixation cachés. Structure légère et facile à manipuler. Parfait pour une intégration élégante dans tout espace extérieur.' },
+        { name: 'Profile Prestige 145', code: '145H22', section: '145x22 mm', length: '2200 mm', weight: '2,90 kg', colors: ['Sable', 'Bois', 'Cuivre', 'Gris foncé'], img: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80', desc: 'Lame composite élégante, idéale pour terrasses et piscines. Résistante à l\'eau et aux UV.', longdesc: 'Les profils Prestige 145 peuvent être installés côté lisse ou rainuré, avec des clips de fixation cachés. Structure légère et facile à manipuler. Parfait pour une intégration élégante dans tout espace extérieur.' },
         { name: 'Profile Elite 145', code: '145E22', section: '145x22 mm', length: '2200 mm', weight: '2,95 kg', colors: ['Sable', 'Bois', 'Gris perle'], img: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=400&q=80', desc: 'Lame composite haut de gamme, installation facile, entretien minimal.', longdesc: 'Le profil Elite 145 offre une résistance accrue et une finition haut de gamme. Idéal pour les terrasses de standing et les espaces publics.' },
-        { name: 'Profile Nautico', code: 'NAT22', section: '140x22 mm', length: '2200 mm', weight: '2,70 kg', colors: ['Bois', 'Gris foncé'], img: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=400&q=80', desc: 'Parfait pour les environnements marins, antidérapant et durable.', longdesc: 'Le profil Nautico est conçu pour résister à l’humidité et au sel, idéal pour les abords de piscine et les zones côtières.' },
-        { name: 'Skin Prestige 145', code: 'SK145', section: '145x22 mm', length: '2200 mm', weight: '2,80 kg', colors: ['Sable', 'Gris perle', 'Blanc'], img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=400&q=80', desc: 'Bardage moderne, intégration parfaite avec l’architecture extérieure.', longdesc: 'Le bardage Skin Prestige 145 offre une protection durable et une esthétique contemporaine pour vos façades.' }
+        { name: 'Profile Nautico', code: 'NAT22', section: '140x22 mm', length: '2200 mm', weight: '2,70 kg', colors: ['Bois', 'Gris foncé'], img: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=400&q=80', desc: 'Parfait pour les environnements marins, antidérapant et durable.', longdesc: 'Le profil Nautico est conçu pour résister à l\'humidité et au sel, idéal pour les abords de piscine et les zones côtières.' },
+        { name: 'Skin Prestige 145', code: 'SK145', section: '145x22 mm', length: '2200 mm', weight: '2,80 kg', colors: ['Sable', 'Gris perle', 'Blanc'], img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=400&q=80', desc: 'Bardage moderne, intégration parfaite avec l\'architecture extérieure.', longdesc: 'Le bardage Skin Prestige 145 offre une protection durable et une esthétique contemporaine pour vos façades.' }
     ],
     marbre: [
         { name: 'Marbre Blanc Carrare', code: 'MB-CAR', section: '600x600 mm', length: '600 mm', weight: '2.7 kg', colors: ['Blanc', 'Gris perle'], img: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80', desc: 'Pierre naturelle blanche, élégante et intemporelle pour sols et murs.', longdesc: 'Le marbre Blanc Carrare est réputé pour sa pureté et sa résistance. Idéal pour les intérieurs luxueux et les finitions haut de gamme.' },
@@ -131,9 +198,9 @@ const catalogueData = {
         { name: 'Marbre Beige Botticino', code: 'MB-BOT', section: '600x600 mm', length: '600 mm', weight: '2.6 kg', colors: ['Beige', 'Blanc'], img: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=400&q=80', desc: 'Teinte beige douce, idéale pour des ambiances chaleureuses.', longdesc: 'Le marbre Beige Botticino apporte chaleur et raffinement à tous les espaces.' }
     ],
     carrelage: [
-        { name: 'Carrelage Effet Bois', code: 'CRL-BOIS', section: '200x1200 mm', length: '1200 mm', weight: '1.9 kg', colors: ['Bois', 'Gris foncé'], img: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80', desc: 'Aspect bois naturel, entretien facile, parfait pour toutes les pièces.', longdesc: 'Le carrelage effet bois combine l’esthétique du bois et la résistance du grès cérame.' },
-        { name: 'Carrelage Grand Format', code: 'CRL-GF', section: '800x800 mm', length: '800 mm', weight: '3.2 kg', colors: ['Gris perle', 'Blanc'], img: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=400&q=80', desc: 'Dalles XXL pour un effet contemporain et épuré.', longdesc: 'Le carrelage grand format agrandit visuellement les espaces et facilite l’entretien.' },
-        { name: 'Carrelage Imitation Marbre', code: 'CRL-MARB', section: '600x600 mm', length: '600 mm', weight: '2.5 kg', colors: ['Blanc', 'Gris perle'], img: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80', desc: 'Le look du marbre, la praticité du grès cérame.', longdesc: 'Idéal pour ceux qui souhaitent l’élégance du marbre sans les contraintes d’entretien.' },
+        { name: 'Carrelage Effet Bois', code: 'CRL-BOIS', section: '200x1200 mm', length: '1200 mm', weight: '1.9 kg', colors: ['Bois', 'Gris foncé'], img: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80', desc: 'Aspect bois naturel, entretien facile, parfait pour toutes les pièces.', longdesc: 'Le carrelage effet bois combine l\'esthétique du bois et la résistance du grès cérame.' },
+        { name: 'Carrelage Grand Format', code: 'CRL-GF', section: '800x800 mm', length: '800 mm', weight: '3.2 kg', colors: ['Gris perle', 'Blanc'], img: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=400&q=80', desc: 'Dalles XXL pour un effet contemporain et épuré.', longdesc: 'Le carrelage grand format agrandit visuellement les espaces et facilite l\'entretien.' },
+        { name: 'Carrelage Imitation Marbre', code: 'CRL-MARB', section: '600x600 mm', length: '600 mm', weight: '2.5 kg', colors: ['Blanc', 'Gris perle'], img: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80', desc: 'Le look du marbre, la praticité du grès cérame.', longdesc: 'Idéal pour ceux qui souhaitent l\'élégance du marbre sans les contraintes d\'entretien.' },
         { name: 'Carrelage Mosaïque', code: 'CRL-MOS', section: '300x300 mm', length: '300 mm', weight: '1.2 kg', colors: ['Sable', 'Blanc'], img: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=400&q=80', desc: 'Petits carreaux pour décors créatifs et personnalisés.', longdesc: 'La mosaïque permet une grande liberté de création pour vos espaces.' }
     ],
     parquet: [
@@ -143,6 +210,7 @@ const catalogueData = {
         { name: 'Parquet Bambou', code: 'PQT-BAM', section: '130x14 mm', length: '960 mm', weight: '1.5 kg', colors: ['Sable', 'Blanc'], img: 'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80', desc: 'Écologique, résistant et moderne.', longdesc: 'Le parquet bambou est une alternative écologique et tendance pour vos sols.' }
     ]
 };
+
 // Render products
 function renderProducts(category) {
     const grid = document.getElementById('catalogue-products-grid');
@@ -159,6 +227,7 @@ function renderProducts(category) {
         grid.appendChild(card);
     });
 }
+
 // Filter logic
 const filterBtns = document.querySelectorAll('.catalogue-filter-btn');
 filterBtns.forEach(btn => {
@@ -168,11 +237,14 @@ filterBtns.forEach(btn => {
         renderProducts(this.dataset.category);
     });
 });
+
 // Initial render
 renderProducts('novowood');
+
 const modalOverlay = document.getElementById('catalogue-modal-overlay');
 const modalContent = document.getElementById('catalogue-modal-content');
 const modalClose = document.getElementById('catalogue-modal-close');
+
 const colorMap = {
     'Bois': '#bfa16c',
     'Gris foncé': '#495057',
@@ -181,6 +253,7 @@ const colorMap = {
     'Cuivre': '#a67c52',
     'Blanc': '#fff'
 };
+
 function renderProductModal(prod) {
     let colorSwatches = '';
     if (prod.colors && prod.colors.length) {
@@ -191,7 +264,7 @@ function renderProductModal(prod) {
             </span>
         `).join('');
     }
-    // Only one close button, outside the grid
+    
     modalContent.innerHTML = `
         <button class="catalogue-modal-close" id="catalogue-modal-close" aria-label="Fermer le détail produit">&times;</button>
         <div class="catalogue-modal-detail-grid" role="dialog" aria-modal="true" aria-labelledby="catalogue-modal-title">
@@ -226,6 +299,7 @@ function renderProductModal(prod) {
             </div>
         </div>
     `;
+    
     // Read more/less toggle
     const readMore = modalContent.querySelector('.catalogue-modal-readmore');
     const longDesc = modalContent.querySelector('.catalogue-modal-longdesc');
@@ -241,6 +315,7 @@ function renderProductModal(prod) {
             }
         });
     }
+    
     // Close button logic
     const closeBtn = modalContent.querySelector('#catalogue-modal-close');
     if (closeBtn) {
@@ -249,6 +324,7 @@ function renderProductModal(prod) {
         });
     }
 }
+
 document.getElementById('catalogue-products-grid').addEventListener('click', function(e) {
     if (e.target.classList.contains('catalogue-product-btn')) {
         const cat = e.target.dataset.category;
@@ -258,9 +334,11 @@ document.getElementById('catalogue-products-grid').addEventListener('click', fun
         modalOverlay.style.display = 'flex';
     }
 });
+
 modalClose.addEventListener('click', function() {
     modalOverlay.style.display = 'none';
 });
+
 modalOverlay.addEventListener('click', function(e) {
     if (e.target === modalOverlay) {
         modalOverlay.style.display = 'none';

@@ -4,26 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Valoreco SARL</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/valoreco-logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/valoreco-logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/valoreco-logo.png">
+    <link rel="manifest" href="./site.webmanifest">
+    
+    <!-- Fonts - Marken style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Orbitron Font for ValorEco logo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
-    <!-- Header Navigation -->
-    <header class="header">
+    <!-- Header Navigation - Marken Style -->
+    <header class="header marken-style visible">
         <nav class="navbar">
             <div class="nav-container">
                 <div class="nav-logo">
-                    <img src="assets/images/valoreco-logo.png" alt="Valoreco SARL Logo" class="logo">
-                    <span class="logo-text">VALORECO</span>
+                    <img src="assets/images/valoreco-logo.png" alt="Valoreco Logo" class="logo">
+                    <span class="logo-text valoreco-text">ValorEco</span>
                 </div>
-                <ul class="nav-menu">
+                
+                <ul class="nav-menu marken-nav">
                     <li class="nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
                     <li class="nav-item"><a href="produits.html" class="nav-link">Nos Produits</a></li>
-                    <li class="nav-item"><a href="about.html" class="nav-link">Qui sommes-nous</a></li>
-                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Qui sommes-nous</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="entreprise.html" class="dropdown-link">L'entreprise</a></li>
+                            <li><a href="mission.html" class="dropdown-link">Mission</a></li>
+                            <li><a href="vision.html" class="dropdown-link">Vision</a></li>
+                            <li><a href="valeurs.html" class="dropdown-link">Valeurs</a></li>
+                            <li><a href="partenariats.html" class="dropdown-link">Partenariats</a></li>
+                            <li><a href="fondateur.html" class="dropdown-link">Le fondateur</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
                 </ul>
+                
+                <div class="nav-actions">
+                    <a href="contact.html" class="btn-track">Demander un devis</a>
+                    <a href="#" class="btn-login">Connexion</a>
+                </div>
+                
                 <div class="hamburger">
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -32,121 +69,154 @@
             </div>
         </nav>
     </header>
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <!-- Contact Form Section - Marken Style -->
+    <section id="contact" class="contact-section marken-contact">
         <div class="container">
+            <div class="contact-hero">
+                <h1>Contact</h1>
+            </div>
+            
             <div class="contact-content">
                 <div class="contact-info">
-                    <h2 class="section-title">Contactez-nous</h2>
-                    <p class="section-subtitle">Prêt à démarrer votre projet ?</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M21 10C21 17 12 23 12 23S3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <div>
-                                <h4>Adresse</h4>
+                    <div class="contact-card">
+                        <h2>Faites le choix de <span class="logo-text valoreco-text">ValorEco</span></h2>
+                        <p>Seul ValorEco offre les capacités complètes et la supervision experte nécessaires pour guider votre projet à travers chaque étape de votre parcours de construction et d'agriculture. Nos experts et spécialistes du service client sont disponibles 24h/24 et 7j/7, partout au Maroc.</p>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <strong>Adresse:</strong>
                                 <p>Casablanca, Maroc</p>
                             </div>
-                        </div>
-                        <div class="contact-item">
-                            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M22 16.92V19.92C22.0011 20.1985 21.9441 20.4742 21.8325 20.7293C21.7209 20.9844 21.5573 21.2136 21.3521 21.4019C21.1469 21.5902 20.9046 21.7335 20.6407 21.8227C20.3769 21.9119 20.0973 21.9452 19.82 21.92C16.7428 21.5856 13.787 20.5341 11.19 18.85C8.77382 17.3146 6.72533 15.2661 5.18999 12.85C3.49997 10.2412 2.44824 7.27099 2.11999 4.18C2.09481 3.90347 2.12787 3.62476 2.21649 3.36162C2.30512 3.09849 2.44756 2.85669 2.63483 2.65162C2.8221 2.44655 3.04995 2.28271 3.30379 2.17052C3.55763 2.05833 3.83206 2.00026 4.10999 2H7.10999C7.59522 1.99522 8.06579 2.16708 8.43373 2.48353C8.80167 2.79999 9.04201 3.23945 9.10999 3.72C9.23662 4.68007 9.47144 5.62273 9.80999 6.53C9.94454 6.88792 9.97348 7.27675 9.89382 7.65319C9.81416 8.02963 9.62877 8.36836 9.35999 8.62L8.08999 9.89C9.51355 12.4136 11.5864 14.4865 14.11 15.91L15.38 14.64C15.6316 14.3712 15.9704 14.1858 16.3468 14.1062C16.7232 14.0265 17.1121 14.0555 17.47 14.19C18.3773 14.5286 19.3199 14.7634 20.28 14.89C20.7658 14.9585 21.2094 15.2032 21.5265 15.5775C21.8437 15.9518 22.0122 16.4296 22 16.92Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <div>
-                                <h4>Téléphone</h4>
+                            <div class="contact-item">
+                                <strong>Email:</strong>
+                                <p>contact@valoreco.ma</p>
+                            </div>
+                            <div class="contact-item">
+                                <strong>Téléphone:</strong>
                                 <p>+212 5 22 XX XX XX</p>
                             </div>
                         </div>
-                        <div class="contact-item">
-                            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <div>
-                                <h4>Email</h4>
-                                <p>contact@valoreco.ma</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contact-actions">
-                        <a href="#" class="btn btn-primary">Télécharger le catalogue</a>
-                        <a href="https://wa.me/212522XXXXXX" class="btn btn-whatsapp" target="_blank">
-                            <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M21 11.5C21.0034 12.8199 20.6951 14.1219 20.1 15.3C19.3944 16.7118 18.3098 17.8992 16.9674 18.7293C15.6251 19.5594 14.0782 19.9994 12.5 20C11.1801 20.0035 9.87812 19.6951 8.7 19.1L3 21L4.9 15.3C4.30493 14.1219 3.99656 12.8199 4 11.5C4.00061 9.92179 4.44061 8.37488 5.27072 7.03258C6.10083 5.69028 7.28825 4.6056 8.7 3.90003C9.87812 3.30496 11.1801 2.99659 12.5 3.00003H13C15.0843 3.11502 17.053 3.99479 18.5291 5.47089C20.0052 6.94699 20.885 8.91568 21 11V11.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            WhatsApp
-                        </a>
                     </div>
                 </div>
+                
                 <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Nom complet *" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Email *" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" id="phone" name="phone" placeholder="Téléphone">
-                        </div>
-                        <div class="form-group">
-                            <select id="service" name="service" required>
-                                <option value="">Sélectionnez un service *</option>
-                                <option value="novowood">Novowood - Revêtement extérieur</option>
-                                <option value="films">Films plastiques industriels</option>
-                                <option value="agricole">Films agricoles</option>
-                                <option value="tubes">Tubes PPR</option>
-                                <option value="autre">Autre</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Votre message *" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-full">Envoyer le message</button>
-                    </form>
+                    <div class="form-card">
+                        <h3>Contactez-nous</h3>
+                        <p>Prêt à démarrer votre projet ? Contactez-nous pour obtenir un devis personnalisé.</p>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="Nom complet" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="phone" name="phone" placeholder="Téléphone">
+                            </div>
+                            <div class="form-group">
+                                <select id="service" name="service" required>
+                                    <option value="">Sélectionnez un service</option>
+                                    <option value="materiaux">Matériaux Architecturaux</option>
+                                    <option value="films">Films Plastiques</option>
+                                    <option value="durable">Solutions Durables</option>
+                                    <option value="autre">Autre</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" placeholder="Votre message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary marken-btn">Envoyer le message</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- Footer - Marken Style -->
+    <footer class="footer marken-footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <img src="assets/images/valoreco-logo.png" alt="Valoreco SARL" class="footer-logo">
-                    <p>Solutions durables pour construction et agriculture</p>
+                    <h4>Entreprise</h4>
+                    <ul>
+                        <li><a href="entreprise.html">L'entreprise</a></li>
+                        <li><a href="partenariats.html">Partenariats</a></li>
+                        <li><a href="fondateur.html">Leadership</a></li>
+                    </ul>
                 </div>
+                
                 <div class="footer-section">
                     <h4>Solutions</h4>
                     <ul>
                         <li><a href="produits.html">Nos Produits</a></li>
+                        <li><a href="mission.html">Mission</a></li>
+                        <li><a href="vision.html">Vision</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-section">
-                    <h4>Entreprise</h4>
+                    <h4>Réseau</h4>
                     <ul>
-                        <li><a href="about.html">Qui sommes-nous</a></li>
+                        <li><a href="partenariats.html">Partenaires</a></li>
                         <li><a href="contact.html">Contact</a></li>
+                        <li><a href="valeurs.html">Valeurs</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-section">
                     <h4>Contact</h4>
                     <p>Casablanca, Maroc</p>
                     <p>contact@valoreco.ma</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link">LinkedIn</a>
-                        <a href="#" class="social-link">Facebook</a>
-                    </div>
+                    <p>+212 5 22 XX XX XX</p>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2024 Valoreco SARL. Tous droits réservés.</p>
+                <div class="footer-legal">
+                    <a href="#">Conditions d'utilisation</a>
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">Cookies</a>
+                    <a href="#">Développement durable</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2024 Valoreco SARL. Tous droits réservés.</p>
+                </div>
             </div>
         </div>
     </footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
+    <!-- Fallback JavaScript for hamburger menu -->
+    <script>
+        // Ensure hamburger menu works even if external script fails
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (hamburger && navMenu) {
+                hamburger.addEventListener('click', function() {
+                    hamburger.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                });
+                
+                // Close menu when clicking on links
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.addEventListener('click', function() {
+                        hamburger.classList.remove('active');
+                        navMenu.classList.remove('active');
+                    });
+                });
+            }
+            
+            // Initialize AOS if available
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    easing: 'ease-in-out',
+                    once: true,
+                    offset: 100
+                });
+            }
+        });
+    </script>
 </body>
 </html> 

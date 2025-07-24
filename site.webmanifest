@@ -1,0 +1,21 @@
+{
+    "name": "Valoreco SARL",
+    "short_name": "Valoreco",
+    "description": "Solutions durables pour construction et agriculture",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#004225",
+    "icons": [
+        {
+            "src": "./assets/images/valoreco-logo.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "./assets/images/valoreco-logo.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+} 

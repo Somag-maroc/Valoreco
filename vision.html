@@ -3,12 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produit1 - Valoreco SARL</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Vision - Valoreco SARL</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/valoreco-logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/valoreco-logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/valoreco-logo.png">
+    <link rel="manifest" href="./site.webmanifest">
+    
+    <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Header Navigation -->
     <header class="header marken-style visible">
         <nav class="navbar">
             <div class="nav-container">
@@ -44,6 +55,7 @@
             </div>
         </nav>
     </header>
+
     <!-- Hero Section -->
     <section class="hero marken-hero">
         <div class="hero-background">
@@ -58,49 +70,79 @@
                         <span class="logo-text valoreco-text">ValorEco</span>
                     </div>
                 </div>
-                <h1 class="hero-title">Matériaux Architecturaux</h1>
-                <p class="hero-subtitle">Choisissez le type adapté à vos besoins</p>
-                <p class="hero-description">Découvrez les différentes variantes de nos matériaux architecturaux adaptées à vos projets.</p>
+                <h1 class="hero-title">Notre Vision</h1>
+                <p class="hero-subtitle">Faire de l'élégance durable la norme</p>
+                <p class="hero-description">Faire de l'élégance durable la norme et devenir un acteur de référence sur le marché marocain.</p>
                 <div class="hero-actions">
-                    <a href="#types" class="btn-primary marken-btn">Découvrir les types</a>
+                    <a href="#vision" class="btn-primary marken-btn">Découvrir notre vision</a>
                     <a href="contact.html" class="btn-secondary marken-btn">Nous contacter</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Product Types Section -->
-    <section id="types" class="services-section marken-services">
+    <!-- Vision Section -->
+    <section id="vision" class="features-section marken-features">
         <div class="container">
             <div class="section-header">
-                <h2>Choisissez un type</h2>
-                <p>Découvrez les différentes variantes adaptées à vos besoins</p>
+                <h2>Notre vision</h2>
+                <p>Faire de l'élégance durable la norme</p>
             </div>
-            <div class="services-grid">
-                <a href="produit1-typeA.html" class="service-card marken-card">
-                    <div class="service-icon">
-                        <svg width="64" height="64"><rect width="64" height="64" rx="14" fill="#D1FAE5"/><rect x="18" y="28" width="28" height="16" rx="4" fill="#34D399"/></svg>
+                        <div class="features-grid">
+                <div class="feature-card marken-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                        </svg>
                     </div>
-                    <h3>Type A</h3>
-                    <p>Idéal pour les applications standards.</p>
-                </a>
-                <a href="produit1-typeB.html" class="service-card marken-card">
-                    <div class="service-icon">
-                        <svg width="64" height="64"><rect width="64" height="64" rx="14" fill="#DBEAFE"/><rect x="18" y="28" width="28" height="16" rx="4" fill="#60A5FA"/></svg>
+                    <h3>Acteur de référence</h3>
+                    <p>Devenir un acteur de référence sur le marché marocain en élargissant son portefeuille de matériaux innovants</p>
+                </div>
+                
+                <div class="feature-card marken-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
                     </div>
-                    <h3>Type B</h3>
-                    <p>Performance renforcée pour conditions exigeantes.</p>
-                </a>
-                <a href="produit1-typeC.html" class="service-card marken-card">
-                    <div class="service-icon">
-                        <svg width="64" height="64"><rect width="64" height="64" rx="14" fill="#FDE68A"/><rect x="18" y="28" width="28" height="16" rx="4" fill="#F59E42"/></svg>
+                    <h3>Réseau international</h3>
+                    <p>Tisser un réseau de partenaires solides dans le monde pour une expertise globale</p>
+                </div>
+                
+                <div class="feature-card marken-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 3v18h18"></path>
+                            <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path>
+                        </svg>
                     </div>
-                    <h3>Type C</h3>
-                    <p>Solution premium pour projets haut de gamme.</p>
-                </a>
+                    <h3>Standards durables</h3>
+                    <p>Redéfinir les standards du design extérieur et intérieur haut de gamme, dans une logique de croissance durable</p>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section marken-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>L'élégance durable comme norme</h2>
+                <p>Notre ambition est de redéfinir les standards du design extérieur et intérieur haut de gamme, dans une logique de croissance durable. Nous croyons en une architecture qui allie beauté, performance et respect de l'environnement.</p>
+                <div class="cta-actions">
+                    <a href="contact.html" class="btn-primary marken-btn">Nous contacter</a>
+                    <a href="produits.html" class="btn-secondary marken-btn">Découvrir nos produits</a>
+                </div>
+            </div>
+        </div>
+    </section>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer marken-footer">
         <div class="container">
@@ -149,6 +191,7 @@
             </div>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html> 
